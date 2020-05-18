@@ -4,11 +4,11 @@ if ENV['COVERAGE'] == "true"
   require 'coveralls'
   Coveralls.wear!
 
-  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
     Coveralls::SimpleCov::Formatter,
     SimpleCov::Formatter::HTMLFormatter,
     SimpleCov::Formatter::Console
-  ]
+  ])
   SimpleCov.start 'rails'
 end
 
