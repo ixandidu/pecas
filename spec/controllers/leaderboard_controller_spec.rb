@@ -12,16 +12,16 @@ describe LeaderboardController, type: :controller do
     end
 
     context "leaderboard exists" do
-      let(:project) { FactoryGirl.create :project }
+      let(:project) { create :project }
       let!(:leaderboard_1) {
-        FactoryGirl.create :project_leaderboard,
+        create :project_leaderboard,
                            total_minutes: 1920,
                            start_date: Time.new(2015, 07, 6, 0, 0, 0).to_date,
                            end_date: Time.new(2015, 07, 12, 0, 0, 0).to_date,
                            project: project
       }
       let!(:leaderboard_2) {
-        FactoryGirl.create :project_leaderboard,
+        create :project_leaderboard,
                            total_minutes: 1740,
                            start_date: Time.new(2015, 07, 13, 0, 0, 0).to_date,
                            end_date: Time.new(2015, 07, 19, 0, 0, 0).to_date,
@@ -42,7 +42,7 @@ describe LeaderboardController, type: :controller do
 
       context "project without logged minutes" do
         let!(:leaderboard_2) {
-          FactoryGirl.create :project_leaderboard,
+          create :project_leaderboard,
                              total_minutes: 0,
                              start_date: Time.new(2015, 07, 13, 0, 0, 0).to_date,
                              end_date: Time.new(2015, 07, 19, 0, 0, 0).to_date,
@@ -110,16 +110,16 @@ describe LeaderboardController, type: :controller do
     end
 
     context "leaderboard exists" do
-      let(:user) { FactoryGirl.create :user }
+      let(:user) { create :user }
       let!(:leaderboard_1) {
-        FactoryGirl.create :user_leaderboard,
+        create :user_leaderboard,
                            total_minutes: 1920,
                            start_date: Time.new(2015, 07, 6, 0, 0, 0).to_date,
                            end_date: Time.new(2015, 07, 12, 0, 0, 0).to_date,
                            user: user
       }
       let!(:leaderboard_2) {
-        FactoryGirl.create :user_leaderboard,
+        create :user_leaderboard,
                            total_minutes: 1740,
                            start_date: Time.new(2015, 07, 13, 0, 0, 0).to_date,
                            end_date: Time.new(2015, 07, 19, 0, 0, 0).to_date,
@@ -140,7 +140,7 @@ describe LeaderboardController, type: :controller do
 
       context "user without logged minutes" do
         let!(:leaderboard_2) {
-          FactoryGirl.create :user_leaderboard,
+          create :user_leaderboard,
                              total_minutes: 0,
                              start_date: Time.new(2015, 07, 13, 0, 0, 0).to_date,
                              end_date: Time.new(2015, 07, 19, 0, 0, 0).to_date,

@@ -51,7 +51,7 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'email_spec'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
   gem 'coveralls', require: false
