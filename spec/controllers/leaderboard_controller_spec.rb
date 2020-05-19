@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe LeaderboardController, type: :controller do
+RSpec.describe LeaderboardController, type: :controller do
   include ActiveSupport::Testing::TimeHelpers
   render_views
 

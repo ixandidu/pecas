@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe User do
+RSpec.describe User do
   include ActiveSupport::Testing::TimeHelpers
 
   describe '.send_reminders' do
