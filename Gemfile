@@ -36,6 +36,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -47,9 +49,7 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails'
   gem 'email_spec'
-  gem 'factory_bot_rails'
   gem 'simplecov', '< 0.18.0', require: false
   gem 'simplecov-console', require: false
   gem 'coveralls', require: false

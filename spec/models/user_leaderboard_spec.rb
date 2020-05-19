@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe UserLeaderboard do
+RSpec.describe UserLeaderboard do
   include ActiveSupport::Testing::TimeHelpers
 
   describe ".with_logged_minutes" do

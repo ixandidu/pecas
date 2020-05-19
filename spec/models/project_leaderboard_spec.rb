@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe ProjectLeaderboard do
+RSpec.describe ProjectLeaderboard do
   describe ".calculate" do
     let!(:project) { create :project }
 

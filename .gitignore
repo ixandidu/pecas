@@ -21,3 +21,4 @@
 
 # SimpleCov report directory
 coverage/*
+/spec/examples.txt

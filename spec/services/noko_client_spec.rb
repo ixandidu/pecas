@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe NokoService do
+RSpec.describe NokoService do
   before do
     stub_const("ENV", {"NOKO_TOKEN" => "foobar"})
   end

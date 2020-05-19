@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Reminder Mailer' do
+RSpec.describe 'Reminder Mailer' do
   include EmailSpec::Helpers
   include EmailSpec::Matchers
 

@@ -1,6 +1,3 @@
-require 'factory_bot'
-FactoryBot.find_definitions
-
 user_1 = FactoryBot.create :user, name: "Hans"
 user_2 = FactoryBot.create :user, name: "Franz"
 user_3 = FactoryBot.create :user, name: "Otto"
