@@ -7,7 +7,7 @@ RSpec.configure do |config|
     if config.files_to_run.one?
       puts 'Skipping FactoryBot.lint for speed'
     else
-      ActiveRecord::Base.transaction do
+      ApplicationRecord.transaction do
         start = Time.now
 
         # Option 1) Lint all factories with traits:

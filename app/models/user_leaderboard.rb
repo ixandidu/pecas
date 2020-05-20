@@ -1,4 +1,4 @@
-class UserLeaderboard < ActiveRecord::Base
+class UserLeaderboard < ApplicationRecord
   include LeaderboardScopes
   include LeaderboardCalculation
 
