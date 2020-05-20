@@ -38,14 +38,13 @@ end
 
   def self.save_entries_for(result)
     result.each do |entry|
-      e1 = Entry.find_or_create_by(id: entry.id)
-      e1.update_columns(
-        description: entry.description,
-        minutes:     entry.minutes,
-        date:        entry.date,
-        user_id:     entry.user.id,
-        project_id:  entry.project.id
-      )
+      Entry.find_or_create_by!(id: entry.id) do |e|
+        e.description = entry.description
+        e.minutes     = entry.minutes
+        e.date        = entry.date
+        e.user_id     = entry.user.id
+        e.project_id  = entry.project.id
+      end
     end
   end
 end

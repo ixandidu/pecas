@@ -22,8 +22,12 @@ RSpec.describe NokoService do
     end
 
     context "with new entries" do
-      let(:noko_user) { double("Noko::User", id: 1, state: "active") }
-      let(:noko_project) { double("Noko::Project", id: 1, enabled: true) }
+      let(:user) { create(:user) }
+      let(:project) { create(:project) }
+      let(:noko_user) { double("Noko::User", user.slice(:id, :state)) }
+      let(:noko_project) do
+        double("Noko::Project", project.slice(:id, :enabled))
+      end
       let(:noko_entry) do
         double("Noko::Entry", id: 1, description: "Hello!", minutes: 60,
                                  date: Time.zone.now, user: noko_user,
